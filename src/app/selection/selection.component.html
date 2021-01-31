@@ -1,0 +1,15 @@
+<div class="selectionDiv">
+    <ul *ngIf="showSelection" class="nav nav-pills nav-fill">
+        <li 
+            *ngFor="let type of allTypes" 
+            class="nav-item">
+            <a  
+                class="nav-link"
+                [routerLink]="[type]"
+                routerLinkActive="active">
+                {{ type }}
+            </a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

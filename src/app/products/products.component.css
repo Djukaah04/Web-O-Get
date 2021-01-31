@@ -1,0 +1,18 @@
+@font-face { font-family: TitleFont; src: url('../../assets/fonts/Kbreindeergames-ra2O.ttf'); } 
+@font-face { font-family: TextFont; src: url('../../assets/fonts/small_pixel-7.ttf'); } 
+
+* {
+    font-family: TextFont;
+    font-weight: 15rem;
+}
+
+.productsDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60vw;
+}
+.productDiv {
+    width: 200px;
+}

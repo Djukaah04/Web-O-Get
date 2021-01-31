@@ -1,0 +1,47 @@
+<div class="homeDiv">
+    <div
+        class="headerDiv">
+        <p class="headerP"
+            *ngIf="showHome"> 
+            <button 
+                class="btn btn-outline-light stats"
+                appDashedSelection 
+                [condition]="viewProfile"
+                (click)="toogleViewProfile()"
+                style="cursor: pointer; border: 1px grey dashed;"
+                [ngStyle]="{ color: getColor() }">
+                {{ user.firstname }} {{ user.lastname }}
+            </button> 
+            <button
+                class="btn btn-outline-light stats"
+                appDashedSelection 
+                [condition]="addBalance" 
+                (click)="toogleAddBalance()"
+                style="cursor: pointer;border: 1px grey dashed;">
+                Balance: {{ user.balance }} 
+            </button>
+            <span 
+                style="display: flex; justify-content: center; align-items: center;"
+                *ngIf="addBalance">
+                <div style="font-size: 40px; display: inline; margin-right: 15px;">
+                    + 
+                </div> 
+                <input 
+                    #addFundsRef 
+                    style="margin-right: 15px; text-align: center;"
+                    type="number"> 
+                <button
+                    class="btn btn-dark" 
+                    (click)="addFunds()">
+                    Add Funds
+                </button>
+            </span>
+        </p>
+        <button routerLink="/login" class="logoutBtn btn btn-outline-light">Logout</button>
+    </div>
+    <div class="bodyDiv">
+        <app-selection (submitted)="OnSubmitted()"></app-selection>
+        <app-purchases *ngIf="viewProfile"></app-purchases>
+        <app-checkout (billPayed)="onBillPayed()" *ngIf="!viewProfile"></app-checkout>
+    </div>
+</div>

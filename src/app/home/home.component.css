@@ -1,0 +1,53 @@
+
+@font-face { font-family: TextFont; src: url('../../assets/fonts/small_pixel-7.ttf'); } 
+
+* {
+    font-family: TextFont;
+}
+
+.homeDiv {
+    min-width: 98vw;
+    min-height: 100vh;
+}
+
+p {
+    font-family: TextFont;
+    color: white;
+    font-size: 20px;
+    padding: 20px 0 0 40px;
+}
+
+.bodyDiv {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.headerDiv { 
+    background-color: rgb(3, 35, 53);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.logoutBtn {
+    margin-right: 20px;
+}
+.headerP {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;      
+}
+.stats {
+    padding: 10px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

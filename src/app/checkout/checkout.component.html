@@ -1,0 +1,24 @@
+<div *ngIf="showCheckout" class="checkoutDiv">
+    <h1 class="checkout-title">Checkout</h1>
+    <h3 class="checkout-subtitle"> {{ user.firstname }} {{ user.lastname }}'s cart:</h3>
+    <div class="checkout-items">
+        <p *ngFor="let product of selectedProducts">- {{ product.amount }}  {{ product.name }}  {{ product.price }}$ <span (click)="reduce(product.productid)">✘</span> </p>
+    </div>
+    <img 
+        src="../../assets/images/open_hand.jpg" 
+        style="height: 100px; width: 70%;"
+        alt="open_hand">
+    <div class="checkout-buy">
+        <h3 style="margin-left: 50px;">
+            Totak check: {{ returnCheck() }}$
+        </h3>
+        <button 
+            #buyBtn
+            class="btn btn-dark" 
+            style="margin-bottom: 10px; margin-right: 50px;" 
+            [disabled]="!selectedProducts[0]"
+            (click)="buy()">
+            Buy
+            </button>
+    </div>
+</div>

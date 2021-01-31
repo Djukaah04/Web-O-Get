@@ -1,0 +1,40 @@
+.checkoutDiv {
+    width: 30vw;
+    height: 80vh;
+    box-shadow: 10px 10px 8px 10px #888888;
+    position: fixed;
+    top: 90px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.checkout-items {
+    height: 300px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.checkout-buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.btn {
+    width: 20%;
+}
+.btn-danger, .btn-success { 
+    width: 30%;
+    transition: width 0.5s ease-in-out, background-color 1s ease-in-out;
+}
+.btn-dark {
+    width: 20%;
+    transition: width 0.5s ease-in-out, background-color 1s ease-in-out;
+}

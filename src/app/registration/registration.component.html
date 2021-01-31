@@ -1,0 +1,33 @@
+<div class="container">
+    <form 
+        #regFormRef="ngForm"
+        (ngSubmit)="handleRegistration(regFormRef)">
+        <div class="regFormDiv">
+            <h1 routerLink="/login"> <span class="arrow">&#8592;</span> Login Page</h1>
+            <div class="inputDiv">
+                <span>First name:</span> 
+                <input type="text" name="firstName" required ngModel>
+            </div>
+            <div class="inputDiv">
+                <span>Last name:</span> 
+                <input type="text" name="lastName" required ngModel>
+            </div>
+            <div class="inputDiv">
+                <span>E-mail:</span> 
+                <input type="email" name="email" required ngModel>
+            </div>
+            <div class="inputDiv">
+                <span>Password:</span> 
+                <input type="password" name="password" required ngModel>
+            </div>
+            <input class="btn btn-outline-info" style="width: 40%;" type="submit" value="Register">
+        </div>
+    </form>
+    <div
+        class="statusDiv" 
+        *ngIf="userRegistered">
+        User registered!
+        <br>
+        <div class="redirectDiv">Redirecting in {{ timeLeft }}s!</div> 
+    </div>
+</div>

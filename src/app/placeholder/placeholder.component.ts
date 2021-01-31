@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-placeholder',
+  templateUrl: './placeholder.component.html',
+  styleUrls: ['./placeholder.component.css']
+})
+export class PlaceholderComponent implements OnInit {
+  imgUrl: string;
+  constructor() { }
+
+  ngOnInit(): void {
+    this.imgUrl = '../../assets/images/arrow_up.png'
+  }
+
+}

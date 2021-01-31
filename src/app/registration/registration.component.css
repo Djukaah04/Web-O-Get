@@ -1,0 +1,74 @@
+@font-face { font-family: TitleFont; src: url('../../assets/fonts/Kbreindeergames-ra2O.ttf'); } 
+@font-face { font-family: TextFont; src: url('../../assets/fonts/small_pixel-7.ttf'); } 
+
+* {
+    font-family: TextFont;
+}
+h1 {
+    cursor: pointer;
+}
+.container {
+    min-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 35, 53);
+}
+
+.regFormDiv {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5%;
+    height: 30rem;
+    width: 20rem;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 20px;
+}
+input {
+    width: 150px;
+}
+span {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+.statusDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    font-size: 42px;
+    color: white;
+    padding-bottom: 30px;
+}
+.redirectDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+.arrow {
+    font-size: 40px;
+}
+input.ng-invalid.ng-touched { 
+    background-color: rgb(228, 137, 137);
+    color: black;
+
+}

@@ -1,0 +1,22 @@
+
+@font-face { font-family: TextFont; src: url('../../assets/fonts/small_pixel-7.ttf'); } 
+
+* {
+    font-family: TextFont;
+    font-size: 30px;
+}
+
+.selectionDiv {
+    background-color: white;
+    padding: 0;
+    min-height: 90vh;
+    margin-left: 3vw;
+    width: 60vw;
+}
+
+.nav {
+    padding-bottom: 20px ;
+}
+.nav-link {
+    font-size: 20px;
+}

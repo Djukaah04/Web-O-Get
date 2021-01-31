@@ -1,0 +1,34 @@
+.purchasesDiv {
+    width: 30vw;
+    height: 80vh;
+    position: fixed;
+    top: 90px;
+    right: 50px;
+    box-shadow: 10px 10px 8px 10px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.purchased-items {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 25px;
+}
+.items-info {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.items-info-text {
+    width: 60%;
+}

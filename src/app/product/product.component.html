@@ -1,0 +1,36 @@
+
+<div 
+    #productDiv
+    class="card-body border-black">
+    <img 
+        #productImg
+        style="height: 170px; width: 170px;" 
+        [src]="imgUrl" 
+        alt="type">
+    <div class="infoDiv">
+        <h5 
+            appImgHover
+            [timesBought]="product.timesbought"
+            [productImg]="productImg"
+            [productDiv]="productDiv"
+            [productsBuyers]="productsBuyers"
+            style="text-align: center;"  
+            class="card-title"> 
+                {{ product.name }}
+        </h5>
+        <img src="../../assets/svg/pointer.svg" style="height: 40px; width: 40px;" alt="pointer"> 
+        <div class="box">
+            <div class="box-sm red"></div>
+            <div class="box-sm orange"></div>
+            <div class="box-sm yellow "></div>
+            <div class="box-sm green "></div>
+            <div class="box-sm blue "></div>
+            <div class="box-sm purple"></div>
+        </div>
+        <p 
+            style="text-align: center;" 
+            class="card-text">Price: {{ product.price }}$
+        </p>
+        <button class="btn btn-dark" (click)="productClickedOn()">Add to Cart</button>
+    </div>
+</div>

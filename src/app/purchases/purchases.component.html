@@ -1,0 +1,23 @@
+<div
+    class="purchasesDiv">
+    <div
+        *ngIf="showPurchaseTitle" 
+        style="font-size: 40px;">
+        {{ user.firstname }}'s purchases:
+    </div>
+    <div
+        *ngIf="showPurchases"
+        class="purchased-items">
+        <div
+            *ngFor="let purchase of usersPurchases; let i = index"
+            class="items-info">
+            <div class="items-info-text">
+                {{ purchase.name }} x {{ purchase.amount }}
+            </div> 
+            <div class="items-info-img"> 
+                <img style="height: 100px; width: 100px;" [src]="purchaseUrls[i]" alt="purchasePicture">
+            </div>
+        </div>
+    </div>
+    <div style="font-size: 40px;">{{ returnTotalMoneySpent() }}$ spent! </div>
+</div>
